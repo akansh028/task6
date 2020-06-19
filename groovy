@@ -45,8 +45,7 @@ job("G2") {
 	"""
 	
 	steps { shell(command) }
-	
-	}	
+		
 }
 
 job("G3") {
