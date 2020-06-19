@@ -5,17 +5,18 @@ job("G1") {
 	triggers { githubPush() }
 
 	wrappers { preBuildCleanup() }
-
+	
 	steps {
-		dockerBuildAndPublish {
-			repositoryname('ashishkr99/httpd-server')
-			tag("latest")
-			dockerHostURI('tcp://0.0.0.0:1234')
-			registeryCredentials('docker-hub')
-			createFingerprints(false)
-			skipDecorate(false)
-			skipTagAsLatest(true)
-		}
+          dockerBuildAndPublish {
+            repositoryName('akansh028/apache-webserver-php')
+            tag("latest")
+            dockerHostURI('tcp://0.0.0.0:1234')
+            registryCredentials('akansh028')
+            createFingerprints(false)
+            skipDecorate(false)
+            skipTagAsLatest(true)
+           }
+	
 	}	
 }
 
@@ -36,7 +37,7 @@ job("G2") {
 			sudo kubectl rollout restart deployment/web1
 			sudo kubectl rollout status deployment/web1
   		else
-			sudo kubectl create deployment web1 --image=ashishkr99/httpd-server:latest
+			sudo kubectl create deployment web1 --image=akansh028/apache-webserver-php:latest
 			sudo kubectl scale deployment web1 --replicas=3
 			sudo kubectl expose deployment web1 --port 80 --type NodePort
 		fi
