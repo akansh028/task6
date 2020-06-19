@@ -8,9 +8,7 @@ job("G1") {
 
 	steps {
 		dockerBuildAndPublish {
-			repositoryname('akansh028/apache-webserver-php')
-			setRepositoryName('akansh028/apache-webserver-php')
-			getRepositoryName('akansh028/apache-webserver-php')
+			repositoryname("akansh028/apache-webserver")
 			tag("latest")
 			dockerHostURI('tcp://0.0.0.0:1234')
 			registeryCredentials('akansh028')
