@@ -36,7 +36,7 @@ job("G2") {
 			sudo kubectl rollout restart deployment/web1
 			sudo kubectl rollout status deployment/web1
   		else
-			sudo kubectl create deployment web1 --image=akansh028/apache-webserver-php:latest
+			sudo kubectl create deployment web1 --image=akansh028/apache-webserver:latest
 			sudo kubectl scale deployment web1 --replicas=3
 			sudo kubectl expose deployment web1 --port 80 --type NodePort
 		fi
