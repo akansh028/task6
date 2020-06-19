@@ -73,13 +73,13 @@ job("G3") {
 		    attachBuildLog(true)
                     subject('Successfull Build')
                     content('The build is successfull and deployment is done')
-                    recipientList(akansh.agarwal23@gmail.com)
+                    recipientList('akansh.agarwal23@gmail.com')
                     }
 		failure {
 		    attachBuildLog(true)
                     subject('Failed Build')
                     content('The build is unsuccessfull and deployment is not done')
-                    recipientList(akansh.agarwal23@gmail.com)
+                    recipientList('akansh.agarwal23@gmail.com')
                     }
                 }
             }
