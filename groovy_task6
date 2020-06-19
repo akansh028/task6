@@ -1,6 +1,6 @@
 job("G1") {
 	
-	scm { github("https://github.com/akansh028/task6.git") }
+	scm { github('akansh028/devopstask4' , 'master') }
 	
 	triggers { githubPush() }
 
