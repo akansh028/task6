@@ -8,7 +8,7 @@ job("G1"){
                 scm("* * * * *")
                 
   	}
-         label("G1")
+         
 
 
         steps {
@@ -28,7 +28,7 @@ job("G2"){
     threshold("Fail")
         }
         }
-        label("G1")
+        
 
         steps {
         shell('''if sudo kubectl get deployment | grep web1
@@ -63,7 +63,7 @@ job("G3"){
     threshold("Fail")
    } 
         }
-        label("G1")
+        
 
 
         steps {
